@@ -70,14 +70,14 @@ class APIManager {
     // MARK: - Search Movie
     
     /// Return list of movies using a string
-    func getMoviesBySearch(search: String, page: Int, completionHandler: @escaping (_ messages: [Movie]?) -> Void) {
+    func getMoviesBySearch(search: String, page: Int, completionHandler: @escaping (_ messages: Movies?) -> Void) {
         
-        self.requestArray(requestType: .post, route: "&s=\(search)&page=\(page)", completionHandler: completionHandler)
+        self.request(requestType: .post, route: "s=\(search)&page=\(page)", completionHandler: completionHandler)
     }
     
     /// Return list of movies using the id of the movie
-    func getMovieById(id: Int, completionHandler: @escaping (_ messages: Movie?) -> Void) {
+    func getMovieById(id: String, completionHandler: @escaping (_ messages: Movie?) -> Void) {
         
-        self.request(requestType: .post, route: "&i=\(id)", completionHandler: completionHandler)
+        self.request(requestType: .post, route: "i=\(id)", completionHandler: completionHandler)
     }
 }

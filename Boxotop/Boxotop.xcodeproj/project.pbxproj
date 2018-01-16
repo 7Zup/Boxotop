@@ -12,7 +12,7 @@
 		E7AA5F44200E8F4D007DF3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F43200E8F4D007DF3E1 /* AppDelegate.swift */; };
 		E7AA5F4B200E8F4D007DF3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7AA5F4A200E8F4D007DF3E1 /* Assets.xcassets */; };
 		E7AA5F4E200E8F4D007DF3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AA5F4C200E8F4D007DF3E1 /* LaunchScreen.storyboard */; };
-		E7AA5F59200E8F4D007DF3E1 /* BoxotopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F58200E8F4D007DF3E1 /* BoxotopTests.swift */; };
+		E7AA5F59200E8F4D007DF3E1 /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F58200E8F4D007DF3E1 /* MovieTests.swift */; };
 		E7AA5F64200E8F4D007DF3E1 /* BoxotopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F63200E8F4D007DF3E1 /* BoxotopUITests.swift */; };
 		E7AA5F7A200E9A72007DF3E1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F79200E9A72007DF3E1 /* Movie.swift */; };
 		E7FE3001200E9ED300CCA6AB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FE3000200E9ED300CCA6AB /* HomeVC.swift */; };
@@ -54,7 +54,7 @@
 		E7AA5F4D200E8F4D007DF3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7AA5F4F200E8F4D007DF3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7AA5F54200E8F4D007DF3E1 /* BoxotopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxotopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7AA5F58200E8F4D007DF3E1 /* BoxotopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxotopTests.swift; sourceTree = "<group>"; };
+		E7AA5F58200E8F4D007DF3E1 /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		E7AA5F5A200E8F4D007DF3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7AA5F5F200E8F4D007DF3E1 /* BoxotopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxotopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AA5F63200E8F4D007DF3E1 /* BoxotopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxotopUITests.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		E7AA5F57200E8F4D007DF3E1 /* BoxotopTests */ = {
 			isa = PBXGroup;
 			children = (
-				E7AA5F58200E8F4D007DF3E1 /* BoxotopTests.swift */,
+				E7AA5F58200E8F4D007DF3E1 /* MovieTests.swift */,
 				E7AA5F5A200E8F4D007DF3E1 /* Info.plist */,
 			);
 			path = BoxotopTests;
@@ -525,7 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7AA5F59200E8F4D007DF3E1 /* BoxotopTests.swift in Sources */,
+				E7AA5F59200E8F4D007DF3E1 /* MovieTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

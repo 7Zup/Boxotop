@@ -14,7 +14,7 @@ import ObjectMapper
 class Movies: Mappable {
     
     var movies: [Movie]?
-    var totalResults: Int?
+    var totalResults: String?
     
     required init?(map: Map) {
     }
@@ -34,8 +34,8 @@ class Movies: Mappable {
 class Movie: Mappable {
     
     var title: String?
-    var year: Int?
-    var imdbID: Int?
+    var year: String?
+    var imdbID: String?
     var type: String?
     var poster: String?
     
