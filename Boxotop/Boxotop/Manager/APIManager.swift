@@ -36,7 +36,7 @@ class APIManager {
     /*****************************************************************************/
     // MARK: - General request to use the API
     
-    func request<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 2, completionHandler: @escaping (_ object: T?) -> Void) {
+    private func request<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 2, completionHandler: @escaping (_ object: T?) -> Void) {
         
         print("request route : \(apiURL)\(route)")
         print("params \(String(describing: params ?? nil))")
@@ -49,7 +49,7 @@ class APIManager {
         }
     }
     
-    func requestArray<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 5, completionHandler: @escaping (_ object: [T]?) -> Void) {
+    private func requestArray<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 5, completionHandler: @escaping (_ object: [T]?) -> Void) {
         
         print("request route : \(apiURL)\(route)")
         print("params \(String(describing: params ?? nil))")
