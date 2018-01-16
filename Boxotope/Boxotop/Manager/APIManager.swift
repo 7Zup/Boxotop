@@ -78,6 +78,6 @@ class APIManager {
     /// Return list of movies using the id of the movie
     func getMovieById(id: Int, completionHandler: @escaping (_ messages: Movie?) -> Void) {
         
-        self.requestArray(requestType: .post, route: "&i=\(id)", completionHandler: completionHandler)
+        self.request(requestType: .post, route: "&i=\(id)", completionHandler: completionHandler)
     }
 }
