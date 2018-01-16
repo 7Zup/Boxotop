@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2484065FC9A6D70C4AFC5CB2 /* Pods_Boxotop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244A281EF25B7BF1C2648297 /* Pods_Boxotop.framework */; };
+		7287528D617A44F1B1B5F078 /* Pods_BoxotopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCD478DC435A51D32819981 /* Pods_BoxotopUITests.framework */; };
+		E7AA5F44200E8F4D007DF3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F43200E8F4D007DF3E1 /* AppDelegate.swift */; };
+		E7AA5F4B200E8F4D007DF3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7AA5F4A200E8F4D007DF3E1 /* Assets.xcassets */; };
+		E7AA5F4E200E8F4D007DF3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AA5F4C200E8F4D007DF3E1 /* LaunchScreen.storyboard */; };
+		E7AA5F59200E8F4D007DF3E1 /* BoxotopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F58200E8F4D007DF3E1 /* BoxotopTests.swift */; };
+		E7AA5F64200E8F4D007DF3E1 /* BoxotopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F63200E8F4D007DF3E1 /* BoxotopUITests.swift */; };
+		E7AA5F7A200E9A72007DF3E1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AA5F79200E9A72007DF3E1 /* Movie.swift */; };
+		E7FE3001200E9ED300CCA6AB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FE3000200E9ED300CCA6AB /* HomeVC.swift */; };
+		E7FE3003200EA00600CCA6AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7FE3002200EA00600CCA6AB /* Main.storyboard */; };
+		E7FE3005200EA05F00CCA6AB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FE3004200EA05F00CCA6AB /* APIManager.swift */; };
+		F56F56A2C9475AF1E7542B1B /* Pods_BoxotopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09C8C88844A778D1701CDD /* Pods_BoxotopTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7AA5F55200E8F4D007DF3E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7AA5F38200E8F4C007DF3E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7AA5F3F200E8F4C007DF3E1;
+			remoteInfo = Boxotop;
+		};
+		E7AA5F60200E8F4D007DF3E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7AA5F38200E8F4C007DF3E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7AA5F3F200E8F4C007DF3E1;
+			remoteInfo = Boxotop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09BB1EB372F93AE7A9C1E7C0 /* Pods-BoxotopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxotopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoxotopUITests/Pods-BoxotopUITests.release.xcconfig"; sourceTree = "<group>"; };
+		244A281EF25B7BF1C2648297 /* Pods_Boxotop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boxotop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DCD478DC435A51D32819981 /* Pods_BoxotopUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoxotopUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1D4DEC906E7982CC9C2DFA /* Pods-BoxotopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxotopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BoxotopTests/Pods-BoxotopTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D4F09C86CD159A394D3FF95 /* Pods-BoxotopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxotopUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoxotopUITests/Pods-BoxotopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7EA743F4EABD2C70112D82CA /* Pods-Boxotop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boxotop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boxotop/Pods-Boxotop.release.xcconfig"; sourceTree = "<group>"; };
+		9A074FA672D5D6B0C81454C0 /* Pods-Boxotop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boxotop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boxotop/Pods-Boxotop.debug.xcconfig"; sourceTree = "<group>"; };
+		DA0A49CFBE4FFEF632012FB1 /* Pods-BoxotopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxotopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BoxotopTests/Pods-BoxotopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE09C8C88844A778D1701CDD /* Pods_BoxotopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoxotopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AA5F40200E8F4C007DF3E1 /* Boxotop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxotop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AA5F43200E8F4D007DF3E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7AA5F4A200E8F4D007DF3E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7AA5F4D200E8F4D007DF3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7AA5F4F200E8F4D007DF3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7AA5F54200E8F4D007DF3E1 /* BoxotopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxotopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AA5F58200E8F4D007DF3E1 /* BoxotopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxotopTests.swift; sourceTree = "<group>"; };
+		E7AA5F5A200E8F4D007DF3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7AA5F5F200E8F4D007DF3E1 /* BoxotopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxotopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AA5F63200E8F4D007DF3E1 /* BoxotopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxotopUITests.swift; sourceTree = "<group>"; };
+		E7AA5F65200E8F4D007DF3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7AA5F79200E9A72007DF3E1 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E7FE3000200E9ED300CCA6AB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		E7FE3002200EA00600CCA6AB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E7FE3004200EA05F00CCA6AB /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7AA5F3D200E8F4C007DF3E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2484065FC9A6D70C4AFC5CB2 /* Pods_Boxotop.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AA5F51200E8F4D007DF3E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F56F56A2C9475AF1E7542B1B /* Pods_BoxotopTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AA5F5C200E8F4D007DF3E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7287528D617A44F1B1B5F078 /* Pods_BoxotopUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A38C5CBB4C1AF603798D468 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A074FA672D5D6B0C81454C0 /* Pods-Boxotop.debug.xcconfig */,
+				7EA743F4EABD2C70112D82CA /* Pods-Boxotop.release.xcconfig */,
+				DA0A49CFBE4FFEF632012FB1 /* Pods-BoxotopTests.debug.xcconfig */,
+				6A1D4DEC906E7982CC9C2DFA /* Pods-BoxotopTests.release.xcconfig */,
+				6D4F09C86CD159A394D3FF95 /* Pods-BoxotopUITests.debug.xcconfig */,
+				09BB1EB372F93AE7A9C1E7C0 /* Pods-BoxotopUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C67049C0FD203E2A982FAA88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				244A281EF25B7BF1C2648297 /* Pods_Boxotop.framework */,
+				DE09C8C88844A778D1701CDD /* Pods_BoxotopTests.framework */,
+				3DCD478DC435A51D32819981 /* Pods_BoxotopUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7AA5F37200E8F4C007DF3E1 = {
+			isa = PBXGroup;
+			children = (
+				E7AA5F42200E8F4C007DF3E1 /* Boxotop */,
+				E7AA5F57200E8F4D007DF3E1 /* BoxotopTests */,
+				E7AA5F62200E8F4D007DF3E1 /* BoxotopUITests */,
+				E7AA5F41200E8F4C007DF3E1 /* Products */,
+				0A38C5CBB4C1AF603798D468 /* Pods */,
+				C67049C0FD203E2A982FAA88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E7AA5F41200E8F4C007DF3E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7AA5F40200E8F4C007DF3E1 /* Boxotop.app */,
+				E7AA5F54200E8F4D007DF3E1 /* BoxotopTests.xctest */,
+				E7AA5F5F200E8F4D007DF3E1 /* BoxotopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7AA5F42200E8F4C007DF3E1 /* Boxotop */ = {
+			isa = PBXGroup;
+			children = (
+				E7AA5F74200E8FD7007DF3E1 /* Manager */,
+				E7AA5F72200E8F73007DF3E1 /* Controller */,
+				E7AA5F71200E8F6B007DF3E1 /* View */,
+				E7AA5F73200E8F78007DF3E1 /* Model */,
+				E7AA5F43200E8F4D007DF3E1 /* AppDelegate.swift */,
+				E7AA5F4A200E8F4D007DF3E1 /* Assets.xcassets */,
+				E7AA5F4C200E8F4D007DF3E1 /* LaunchScreen.storyboard */,
+				E7AA5F4F200E8F4D007DF3E1 /* Info.plist */,
+			);
+			path = Boxotop;
+			sourceTree = "<group>";
+		};
+		E7AA5F57200E8F4D007DF3E1 /* BoxotopTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7AA5F58200E8F4D007DF3E1 /* BoxotopTests.swift */,
+				E7AA5F5A200E8F4D007DF3E1 /* Info.plist */,
+			);
+			path = BoxotopTests;
+			sourceTree = "<group>";
+		};
+		E7AA5F62200E8F4D007DF3E1 /* BoxotopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7AA5F63200E8F4D007DF3E1 /* BoxotopUITests.swift */,
+				E7AA5F65200E8F4D007DF3E1 /* Info.plist */,
+			);
+			path = BoxotopUITests;
+			sourceTree = "<group>";
+		};
+		E7AA5F71200E8F6B007DF3E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7FE3002200EA00600CCA6AB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E7AA5F72200E8F73007DF3E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E7FE3000200E9ED300CCA6AB /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E7AA5F73200E8F78007DF3E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7AA5F79200E9A72007DF3E1 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7AA5F74200E8FD7007DF3E1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E7FE3004200EA05F00CCA6AB /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7AA5F3F200E8F4C007DF3E1 /* Boxotop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7AA5F68200E8F4D007DF3E1 /* Build configuration list for PBXNativeTarget "Boxotop" */;
+			buildPhases = (
+				FB3EF73F1B07432FA3D52135 /* [CP] Check Pods Manifest.lock */,
+				E7AA5F3C200E8F4C007DF3E1 /* Sources */,
+				E7AA5F3D200E8F4C007DF3E1 /* Frameworks */,
+				E7AA5F3E200E8F4C007DF3E1 /* Resources */,
+				8AA46D69374A333DADF65C30 /* [CP] Embed Pods Frameworks */,
+				28743E8F05928D4FF27F9DDF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Boxotop;
+			productName = Boxotop;
+			productReference = E7AA5F40200E8F4C007DF3E1 /* Boxotop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7AA5F53200E8F4D007DF3E1 /* BoxotopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7AA5F6B200E8F4D007DF3E1 /* Build configuration list for PBXNativeTarget "BoxotopTests" */;
+			buildPhases = (
+				5E0A5BE44262EBCAC07130F1 /* [CP] Check Pods Manifest.lock */,
+				E7AA5F50200E8F4D007DF3E1 /* Sources */,
+				E7AA5F51200E8F4D007DF3E1 /* Frameworks */,
+				E7AA5F52200E8F4D007DF3E1 /* Resources */,
+				C9064FCB789909BE4C357D82 /* [CP] Embed Pods Frameworks */,
+				81C79E01CE564F92043D540F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7AA5F56200E8F4D007DF3E1 /* PBXTargetDependency */,
+			);
+			name = BoxotopTests;
+			productName = BoxotopTests;
+			productReference = E7AA5F54200E8F4D007DF3E1 /* BoxotopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7AA5F5E200E8F4D007DF3E1 /* BoxotopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7AA5F6E200E8F4D007DF3E1 /* Build configuration list for PBXNativeTarget "BoxotopUITests" */;
+			buildPhases = (
+				620B1C6920187C5C7447CDF4 /* [CP] Check Pods Manifest.lock */,
+				E7AA5F5B200E8F4D007DF3E1 /* Sources */,
+				E7AA5F5C200E8F4D007DF3E1 /* Frameworks */,
+				E7AA5F5D200E8F4D007DF3E1 /* Resources */,
+				4B7F7324AFBC5D679891CD07 /* [CP] Embed Pods Frameworks */,
+				B55F8829FB73A8E807635F85 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7AA5F61200E8F4D007DF3E1 /* PBXTargetDependency */,
+			);
+			name = BoxotopUITests;
+			productName = BoxotopUITests;
+			productReference = E7AA5F5F200E8F4D007DF3E1 /* BoxotopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7AA5F38200E8F4C007DF3E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Fabrice Froehly";
+				TargetAttributes = {
+					E7AA5F3F200E8F4C007DF3E1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E7AA5F53200E8F4D007DF3E1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7AA5F3F200E8F4C007DF3E1;
+					};
+					E7AA5F5E200E8F4D007DF3E1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7AA5F3F200E8F4C007DF3E1;
+					};
+				};
+			};
+			buildConfigurationList = E7AA5F3B200E8F4C007DF3E1 /* Build configuration list for PBXProject "Boxotop" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7AA5F37200E8F4C007DF3E1;
+			productRefGroup = E7AA5F41200E8F4C007DF3E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7AA5F3F200E8F4C007DF3E1 /* Boxotop */,
+				E7AA5F53200E8F4D007DF3E1 /* BoxotopTests */,
+				E7AA5F5E200E8F4D007DF3E1 /* BoxotopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7AA5F3E200E8F4C007DF3E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7FE3003200EA00600CCA6AB /* Main.storyboard in Resources */,
+				E7AA5F4E200E8F4D007DF3E1 /* LaunchScreen.storyboard in Resources */,
+				E7AA5F4B200E8F4D007DF3E1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AA5F52200E8F4D007DF3E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AA5F5D200E8F4D007DF3E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28743E8F05928D4FF27F9DDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boxotop/Pods-Boxotop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B7F7324AFBC5D679891CD07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoxotopUITests/Pods-BoxotopUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E0A5BE44262EBCAC07130F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoxotopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		620B1C6920187C5C7447CDF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoxotopUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81C79E01CE564F92043D540F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoxotopTests/Pods-BoxotopTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA46D69374A333DADF65C30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Boxotop/Pods-Boxotop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStarRatingView/SwiftyStarRatingView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStarRatingView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boxotop/Pods-Boxotop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B55F8829FB73A8E807635F85 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoxotopUITests/Pods-BoxotopUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9064FCB789909BE4C357D82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BoxotopTests/Pods-BoxotopTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB3EF73F1B07432FA3D52135 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boxotop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7AA5F3C200E8F4C007DF3E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7FE3005200EA05F00CCA6AB /* APIManager.swift in Sources */,
+				E7AA5F7A200E9A72007DF3E1 /* Movie.swift in Sources */,
+				E7FE3001200E9ED300CCA6AB /* HomeVC.swift in Sources */,
+				E7AA5F44200E8F4D007DF3E1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AA5F50200E8F4D007DF3E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7AA5F59200E8F4D007DF3E1 /* BoxotopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7AA5F5B200E8F4D007DF3E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7AA5F64200E8F4D007DF3E1 /* BoxotopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7AA5F56200E8F4D007DF3E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7AA5F3F200E8F4C007DF3E1 /* Boxotop */;
+			targetProxy = E7AA5F55200E8F4D007DF3E1 /* PBXContainerItemProxy */;
+		};
+		E7AA5F61200E8F4D007DF3E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7AA5F3F200E8F4C007DF3E1 /* Boxotop */;
+			targetProxy = E7AA5F60200E8F4D007DF3E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7AA5F4C200E8F4D007DF3E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7AA5F4D200E8F4D007DF3E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7AA5F66200E8F4D007DF3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7AA5F67200E8F4D007DF3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7AA5F69200E8F4D007DF3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A074FA672D5D6B0C81454C0 /* Pods-Boxotop.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Boxotop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Boxotop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7AA5F6A200E8F4D007DF3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EA743F4EABD2C70112D82CA /* Pods-Boxotop.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Boxotop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Boxotop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7AA5F6C200E8F4D007DF3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0A49CFBE4FFEF632012FB1 /* Pods-BoxotopTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BoxotopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BoxotopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boxotop.app/Boxotop";
+			};
+			name = Debug;
+		};
+		E7AA5F6D200E8F4D007DF3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A1D4DEC906E7982CC9C2DFA /* Pods-BoxotopTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BoxotopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BoxotopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boxotop.app/Boxotop";
+			};
+			name = Release;
+		};
+		E7AA5F6F200E8F4D007DF3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D4F09C86CD159A394D3FF95 /* Pods-BoxotopUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BoxotopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BoxotopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Boxotop;
+			};
+			name = Debug;
+		};
+		E7AA5F70200E8F4D007DF3E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09BB1EB372F93AE7A9C1E7C0 /* Pods-BoxotopUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BoxotopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BoxotopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Boxotop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7AA5F3B200E8F4C007DF3E1 /* Build configuration list for PBXProject "Boxotop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7AA5F66200E8F4D007DF3E1 /* Debug */,
+				E7AA5F67200E8F4D007DF3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7AA5F68200E8F4D007DF3E1 /* Build configuration list for PBXNativeTarget "Boxotop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7AA5F69200E8F4D007DF3E1 /* Debug */,
+				E7AA5F6A200E8F4D007DF3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7AA5F6B200E8F4D007DF3E1 /* Build configuration list for PBXNativeTarget "BoxotopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7AA5F6C200E8F4D007DF3E1 /* Debug */,
+				E7AA5F6D200E8F4D007DF3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7AA5F6E200E8F4D007DF3E1 /* Build configuration list for PBXNativeTarget "BoxotopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7AA5F6F200E8F4D007DF3E1 /* Debug */,
+				E7AA5F70200E8F4D007DF3E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7AA5F38200E8F4C007DF3E1 /* Project object */;
+}
