@@ -20,8 +20,10 @@ class APIManager {
     
     // Variables
     var access_token: String?
-    private let apiURL = "http://www.omdbapi.com/?apikey=a84e27a3&r=json&"
+    private let apiURL = "http://www.omdbapi.com/?apikey=4d908c4a&r=json&"
     
+//    4d908c4a
+//    a84e27a3
     
     
     
@@ -36,7 +38,7 @@ class APIManager {
     /*****************************************************************************/
     // MARK: - General request to use the API
     
-    private func request<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 2, completionHandler: @escaping (_ object: T?) -> Void) {
+    private func request<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 2, completionHandler: @escaping (_ object: T?) -> Void, errorHandler: ((NSError?) -> Void)?) {
         
         print("request route : \(apiURL)\(route)")
         print("params \(String(describing: params ?? nil))")
@@ -45,11 +47,19 @@ class APIManager {
             .validate(statusCode: 200..<300)
             .responseObject(keyPath: keyPath) { (response: DataResponse<T>) in
                 
-                completionHandler(response.result.value)
+                switch response.result {
+                    
+                    case .success:
+                        
+                        completionHandler(response.result.value)
+                    case .failure:
+                        
+                        errorHandler?(response.error as NSError?)
+                }
         }
     }
     
-    private func requestArray<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 5, completionHandler: @escaping (_ object: [T]?) -> Void) {
+    private func requestArray<T: Mappable>(requestType: HTTPMethod, route: String, params: [String: AnyObject]? = nil, keyPath: String? = nil, retry: Int? = 5, completionHandler: @escaping (_ object: [T]?) -> Void, errorHandler: ((NSError?) -> Void)?) {
         
         print("request route : \(apiURL)\(route)")
         print("params \(String(describing: params ?? nil))")
@@ -58,7 +68,15 @@ class APIManager {
             .validate(statusCode: 200..<300)
             .responseArray(keyPath: keyPath) { (response: DataResponse<[T]>) in
                 
-                completionHandler(response.result.value)
+                switch response.result {
+                    
+                case .success:
+                    
+                    completionHandler(response.result.value)
+                case .failure:
+                    
+                    errorHandler?(response.error as NSError?)
+                }
         }
     }
     
@@ -70,14 +88,14 @@ class APIManager {
     // MARK: - Search Movie
     
     /// Return list of movies using a string
-    func getMoviesBySearch(search: String, page: Int, completionHandler: @escaping (_ messages: Movies?) -> Void) {
+    func getMoviesBySearch(search: String, page: Int, completionHandler: @escaping (_ messages: Movies?) -> Void, errorHandler: ((NSError?) -> Void)?) {
         
-        self.request(requestType: .post, route: "s=\(search)&page=\(page)", completionHandler: completionHandler)
+        self.request(requestType: .post, route: "s=\(search)&page=\(page)", completionHandler: completionHandler, errorHandler: errorHandler)
     }
     
     /// Return list of movies using the id of the movie
-    func getMovieById(id: String, completionHandler: @escaping (_ messages: Movie?) -> Void) {
+    func getMovieById(id: String, completionHandler: @escaping (_ messages: Movie?) -> Void, errorHandler: ((NSError?) -> Void)?) {
         
-        self.request(requestType: .post, route: "i=\(id)", completionHandler: completionHandler)
+        self.request(requestType: .post, route: "i=\(id)", completionHandler: completionHandler, errorHandler: errorHandler)
     }
 }

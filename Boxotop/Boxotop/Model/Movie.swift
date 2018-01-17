@@ -13,7 +13,7 @@ import ObjectMapper
 /// Class Movies that contains a list of movies
 class Movies: Mappable {
     
-    var movies: [Movie]?
+    var movies: [Movie] = []
     var totalResults: String?
     
     required init?(map: Map) {

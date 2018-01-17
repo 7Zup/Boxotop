@@ -25,11 +25,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="search" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-AO-TDv">
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="ex: &quot;Batman&quot;" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-AO-TDv">
                                 <rect key="frame" x="160" y="64" width="215" height="56"/>
                                 <color key="backgroundColor" red="0.41568627450000001" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.41568627450000001" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv-picture" translatesAutoresizingMaskIntoConstraints="NO" id="07M-yn-vC8">
                                 <rect key="frame" x="0.0" y="64" width="57" height="56"/>
@@ -55,8 +59,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tVH-DQ-NyB">
-                                                    <rect key="frame" x="276" y="10" width="89" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tVH-DQ-NyB">
+                                                    <rect key="frame" x="275.5" y="10" width="89.5" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="tVH-DQ-NyB" secondAttribute="height" multiplier="16:9" id="Pl5-2w-NCW"/>
                                                         <constraint firstAttribute="height" constant="50" id="WS0-Kd-Ptg"/>
@@ -78,8 +82,8 @@
                                                 <constraint firstItem="tVH-DQ-NyB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xbh-bX-vXQ" secondAttribute="trailing" constant="10" id="gwz-1n-6Ir"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.71452546120000004" green="0.84248942140000005" blue="0.65996539590000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="contentView" destination="qhi-wy-kbR" id="Who-ae-nBN"/>
                                             <outlet property="imageLabel" destination="tVH-DQ-NyB" id="uRy-2H-FCe"/>
                                             <outlet property="titleLabel" destination="Xbh-bX-vXQ" id="I5l-cb-9Tc"/>
                                         </connections>
