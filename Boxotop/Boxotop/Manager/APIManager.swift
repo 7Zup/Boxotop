@@ -21,9 +21,7 @@ class APIManager {
     // Variables
     var access_token: String?
     private let apiURL = "http://www.omdbapi.com/?apikey=4d908c4a&r=json&"
-    
-//    4d908c4a
-//    a84e27a3
+
     
     
     

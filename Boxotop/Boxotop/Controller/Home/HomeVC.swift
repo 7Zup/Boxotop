@@ -24,13 +24,14 @@ class MovieCell: UITableViewCell {
 /// Manage elements in the Home view
 class HomeVC: UIViewController {
     
+    // Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var movies: Movies?
     var page: Int = 1
     
-    // Avoid bad request
+    // Avoid request loop
     var allowPagination: Bool = true
     
     
@@ -90,18 +91,22 @@ class HomeVC: UIViewController {
     
     func refreshMovieList(search: String?) {
         
+        // The server cannot go after 100 pages
         guard self.page <= 100 else {
             
             return
         }
         
+        // Block pagination until we recieve a response from the server
         self.allowPagination = false
         
         if let search = search, search != "" {
             
+            // Get the list of movie using the search bar
             APIManager.shared.getMoviesBySearch(search: search.lowercased() + "&type=movie", page: self.page, completionHandler: getMoviesCompletionHandler, errorHandler: getMoviesErrorHandler)
         } else {
             
+            // Get the list of movie using the word "batman", it occurs when the search bar is empty
             APIManager.shared.getMoviesBySearch(search: "batman&type=movie", page: self.page, completionHandler: getMoviesCompletionHandler, errorHandler: getMoviesErrorHandler)
         }
     }
@@ -109,15 +114,16 @@ class HomeVC: UIViewController {
     func getMoviesCompletionHandler(movies: Movies?) {
         
         // Block/Allow pagination if the request works/fails
-        if movies != nil {
+        if movies != nil && movies!.movies.isEmpty == false {
             
             self.allowPagination = true
         } else {
             
             self.allowPagination = false
+            return
         }
         
-        // If it is a new movie list
+        // If it is a new movie list, erease the old one
         if self.page == 1 {
             
             self.movies = movies
@@ -126,6 +132,7 @@ class HomeVC: UIViewController {
             
             if let currentMovies = self.movies, let newMovies = movies {
                 
+                // Append the list to the previous one
                 currentMovies.movies.append(contentsOf: newMovies.movies)
                 if let totalResults = newMovies.totalResults {
                     
@@ -134,6 +141,16 @@ class HomeVC: UIViewController {
             }
         }
         self.tableView.reloadData()
+        
+        // Scroll to the top after reload
+        self.scrollToFirstRow()
+    }
+    
+    /// Scroll to the first row of the tableview
+    func scrollToFirstRow() {
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
     
     func getMoviesErrorHandler(error: Error?) {
@@ -210,9 +227,10 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         if let movies = self.movies {
          
+            // If we are at the end of the list, make request to get the rest of the movies
             if indexPath.row + 1 == movies.movies.count {
                 
-                // If pagination is allowed, make request
+                // If pagination is allowed, make a request
                 if self.allowPagination == true {
                     
                     self.page = self.page + 1

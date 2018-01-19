@@ -16,6 +16,10 @@ class Movies: Mappable {
     var movies: [Movie] = []
     var totalResults: String?
     
+    
+    
+    
+    
     required init?(map: Map) {
     }
     
@@ -46,6 +50,10 @@ class Movie: Mappable {
     var writer: String?
     var director: String?
     var actors: String?
+    
+    
+    
+    
     
     required init?(map: Map) {
     }

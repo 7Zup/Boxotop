@@ -13,9 +13,6 @@ import SwiftyStarRatingView
 /// This class will display all information about a movie
 class MovieDetailsVC: UIViewController {
     
-    var imdbID: String!
-    var movie: Movie?
-    
     // Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
@@ -28,6 +25,9 @@ class MovieDetailsVC: UIViewController {
     @IBOutlet weak var writerLabel: UILabel!
     @IBOutlet weak var synopsisTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var imdbID: String!
+    var movie: Movie?
     
     
     
@@ -70,10 +70,11 @@ class MovieDetailsVC: UIViewController {
     
     func getMovie(with id: String) {
         
+        // Get the information about the current movie
         APIManager.shared.getMovie(by: id, completionHandler: getMovieCompletionHandler, errorHandler: nil)
     }
     
-    /// Get movie using its id
+    /// Use the Movie object received from the server
     func getMovieCompletionHandler(movie: Movie?) {
         
         if let movie = movie {
@@ -92,9 +93,13 @@ class MovieDetailsVC: UIViewController {
     
     func initContent() {
         
+        // Colors and text and the navigation bar
         self.navigationController?.isToolbarHidden = false
-        self.navigationController?.navigationBar.tintColor = Colors.customGreen
-        self.navigationController?.title = "Details"
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.barTintColor = Colors.customGreen
+        self.title = "Details"
+        self.navigationController?.navigationBar.backgroundColor = Colors.customGreen//titleTextAttributes = [NSAttributedStringKey.foregroundColor: Colors.customGreen]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         
         // Scroll the textview to the top
         self.synopsisTextView.scrollRangeToVisible(NSMakeRange(0, 0))
@@ -102,6 +107,7 @@ class MovieDetailsVC: UIViewController {
     
     func initMovieDetails() {
         
+        // Check and use each value of the Movie model
         if let movie = self.movie {
             
             if let title = movie.title {
@@ -123,6 +129,7 @@ class MovieDetailsVC: UIViewController {
                 
                 if let number = NumberFormatter().number(from: imdbRating) {
 
+                    // Rating imdb is on 10pts, since the rating library works on 5pts, we ave to devide by 2
                     self.imdbRating.value = CGFloat(truncating: number) / 2
                 }
             }
