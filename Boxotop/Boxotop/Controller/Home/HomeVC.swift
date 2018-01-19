@@ -13,7 +13,7 @@ import SDWebImage
 class MovieCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var imageLabel: UIImageView!
+    @IBOutlet weak var posterImageView: UIImageView!
 }
 
 
@@ -42,8 +42,17 @@ class HomeVC: UIViewController {
         initContent()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     
@@ -56,9 +65,6 @@ class HomeVC: UIViewController {
     func initContent() {
         
         self.searchBar.delegate = self
-        
-        // Hide navigation bar
-        navigationController?.isNavigationBarHidden = true
         
         // Hide edge of search bar
         self.searchBar.backgroundImage = UIImage()
@@ -127,6 +133,24 @@ class HomeVC: UIViewController {
         // Block pagination if the request fails
         self.allowPagination = false
     }
+    
+    
+    
+    
+    
+    /*****************************************************************************/
+    // MARK: - Prepare for segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueMovieDetails" {
+            
+            var destVC = segue.destination as! MovieDetailsVC
+            
+            destVC.imdbID = sender as! String
+        }
+    }
+
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
@@ -151,7 +175,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             
             cell.titleLabel.text = titleMovie
             
-            cell.imageLabel.sd_setImage(with: URL(string: url_poster), placeholderImage: UIImage(named: "tv-picture"))
+            cell.posterImageView.sd_setImage(with: URL(string: url_poster), placeholderImage: UIImage(named: "tv-picture"))
         }
         
         
@@ -187,15 +211,32 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        var imdbID: String = ""
+        
+        // Get the imdbID from our movie list
+        if let id = self.movies?.movies[indexPath.row].imdbID {
+            imdbID = id
+        }
+        
+        // Perform segue and send the id of the movie to the next view controller
+        performSegue(withIdentifier: "segueMovieDetails", sender: imdbID)
+    }
 }
 
 extension HomeVC: UISearchBarDelegate {
     
+    // Function triggered when the user uses the search button on its keyboard
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
+        // Reset pagination
         self.page = 1
         self.allowPagination = true
+        
+        // Refresh the list of movie accordingly to it search
         self.refreshMovieList(search: self.searchBar.text)
-        searchBar.resignFirstResponder()
+//        searchBar.resignFirstResponder()
     }
 }

@@ -48,7 +48,7 @@ class MovieTests: XCTestCase {
         let title: String = "Guardians of the Galaxy Vol. 2"
         
         // get/create user
-        APIManager.shared.getMovieById(id: id, completionHandler: getMovieCompletionHandler)
+        APIManager.shared.getMovie(by: id, completionHandler: getMovieCompletionHandler, errorHandler: nil)
         
         // Wait for asynchronous functions to finish
         waitForExpectations(timeout: 10, handler: nil)
@@ -87,14 +87,14 @@ class MovieTests: XCTestCase {
         let title: String = "Batman Begins"
         
         // get/create user
-        APIManager.shared.getMoviesBySearch(search: searchText, page: page, completionHandler: getMovieListCompletionHandler)
+        APIManager.shared.getMoviesBySearch(search: searchText, page: page, completionHandler: getMovieListCompletionHandler, errorHandler: nil)
         
         // Wait for asynchronous functions to finish
         waitForExpectations(timeout: 10, handler: nil)
         
         // Test if the title received is the same
         // Here filter gets the list in order according to our title var, then it fetches the first elem of the list
-        XCTAssertEqual(title, self.movies?.movies?.filter({ $0.title ?? "" == title }).first?.title)
+        XCTAssertEqual(title, self.movies?.movies.filter({ $0.title ?? "" == title }).first?.title)
     }
     
     /// Completion called when the get movies call had succeeded

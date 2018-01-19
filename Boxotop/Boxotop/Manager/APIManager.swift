@@ -94,7 +94,7 @@ class APIManager {
     }
     
     /// Return list of movies using the id of the movie
-    func getMovieById(id: String, completionHandler: @escaping (_ messages: Movie?) -> Void, errorHandler: ((NSError?) -> Void)?) {
+    func getMovie(by id: String, completionHandler: @escaping (_ messages: Movie?) -> Void, errorHandler: ((NSError?) -> Void)?) {
         
         self.request(requestType: .post, route: "i=\(id)", completionHandler: completionHandler, errorHandler: errorHandler)
     }
