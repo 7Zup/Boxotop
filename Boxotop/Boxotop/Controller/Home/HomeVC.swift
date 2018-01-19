@@ -12,6 +12,7 @@ import SDWebImage
 
 class MovieCell: UITableViewCell {
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
 }
@@ -47,12 +48,19 @@ class HomeVC: UIViewController {
         
         // Hide navigation bar
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        // Hide toolbar
+        self.navigationController?.setToolbarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        // Reveal navigation bar
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        // Hide toolbar
+        self.navigationController?.setToolbarHidden(true, animated: false)
     }
     
     
@@ -145,7 +153,7 @@ class HomeVC: UIViewController {
         
         if segue.identifier == "segueMovieDetails" {
             
-            var destVC = segue.destination as! MovieDetailsVC
+            let destVC = segue.destination as! MovieDetailsVC
             
             destVC.imdbID = sender as! String
         }
@@ -171,11 +179,13 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         if let movies = self.movies,
             movies.movies.count > indexPath.row,
             let titleMovie = movies.movies[indexPath.row].title,
+            let yearMovie = movies.movies[indexPath.row].year,
             let url_poster = movies.movies[indexPath.row].poster {
             
             cell.titleLabel.text = titleMovie
+            cell.dateLabel.text = yearMovie
             
-            cell.posterImageView.sd_setImage(with: URL(string: url_poster), placeholderImage: UIImage(named: "tv-picture"))
+            cell.posterImageView.sd_setImage(with: URL(string: url_poster), placeholderImage: UIImage(named: "missing-picture"))
         }
         
         
@@ -237,6 +247,8 @@ extension HomeVC: UISearchBarDelegate {
         
         // Refresh the list of movie accordingly to it search
         self.refreshMovieList(search: self.searchBar.text)
-//        searchBar.resignFirstResponder()
+        
+        // Close keyboard
+        self.searchBar.endEditing(true)
     }
 }

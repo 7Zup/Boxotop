@@ -27,7 +27,8 @@ class MovieDetailsVC: UIViewController {
     @IBOutlet weak var directorLabel: UILabel!
     @IBOutlet weak var writerLabel: UILabel!
     @IBOutlet weak var synopsisTextView: UITextView!
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     
     
@@ -42,6 +43,22 @@ class MovieDetailsVC: UIViewController {
         super.viewWillAppear(animated)
         
         self.getMovie(with: self.imdbID)
+        
+        // Hide toolbar
+        self.navigationController?.setToolbarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Hide toolbar
+        self.navigationController?.setToolbarHidden(true, animated: false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.scrollView.contentSize.height = 700
     }
     
     
@@ -78,6 +95,9 @@ class MovieDetailsVC: UIViewController {
         self.navigationController?.isToolbarHidden = false
         self.navigationController?.navigationBar.tintColor = Colors.customGreen
         self.navigationController?.title = "Details"
+        
+        // Scroll the textview to the top
+        self.synopsisTextView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
     
     func initMovieDetails() {
