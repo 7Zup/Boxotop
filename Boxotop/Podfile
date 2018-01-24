@@ -8,7 +8,6 @@ target 'Boxotop' do
   # Pods for Boxotop
   pod 'SDWebImage/GIF'
   pod 'RealmSwift'
-  pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
   pod 'AlamofireImage'

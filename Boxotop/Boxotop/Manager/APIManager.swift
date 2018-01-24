@@ -11,7 +11,6 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
-import SwiftyJSON
 
 class APIManager {
     

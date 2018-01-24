@@ -75,4 +75,3 @@ class Movie: Mappable {
         actors          <- map["Actors"]
     }
 }
-
